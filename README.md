@@ -71,12 +71,13 @@ This method employs two local Windows user accounts to isolate the SSDR.settings
 Create 2 local users, make sure you do not create Microsoft accounts for these, Windows will try to encourage you to do this twice! - To do this launch the "Add, edit or remove other users" tool,
 
 > hint... enter "add" into the task-bar search.
+> 
 > Windows 10, just click "Add someone else to this PC", Windows 11, click "Family & others" and then "Add Account" in the Other users section.
 
 
-For my example I created these:
+#### For my example I created these:
 
-> myuser_1 and myuser_2
+    myuser_1 and myuser_2
 
 Create these accounts with good passwords, but do make a note unless you have a photographic memory, since you won't be using the passwords very regularly.
 
@@ -84,18 +85,18 @@ Now you just need to Create a couple of new Shortcuts on the desktop or in a fol
 
 In each Shortcut, where it prompts you to "Type the location of the item:", enter something similar to below, but be sure to change the username after "/user:" to match those you created above, i.e. One shrtcut should have myuser_1 and the other myuser_2. Also set your SmartSSDR.exe path, where I have %PROGRAMFILES%\FlexRadio Systems\SmartSDR v2.7.6\SmartSDR.exe, to match where your copy is located and its version on the system.
 
-C:\Windows\System32\runas.exe /user:myuser_1 /savecred "%PROGRAMFILES%\FlexRadio Systems\SmartSDR v2.7.6\SmartSDR.exe"
+    C:\Windows\System32\runas.exe /user:myuser_1 /savecred "%PROGRAMFILES%\FlexRadio Systems\SmartSDR v2.7.6\SmartSDR.exe"
 
 And when prompted, add a useful name for the Shortcut where it prompts "Type a name for this shortcut"
 
 e.g. "SmartSDR MyUser_1"
 
-Once both shortcuts have been completed...
+#### Once both shortcuts have been completed...
 
-- Launch the first Shortcut, at the password prompt in the command window enter the matching password for the user and press enter.
-- In SmartSDR that should get launched, setup this instance the way you want, i.e. change the STATION name etc...
-- Now do the same with the second Shortcut, i.e. Launch, enter password, configure SmartSDR etc...
-- The next time you launch from the Shortcuts you shouldn't be prompted for the passwords, they should just launch the application.
+1. Launch the first Shortcut, at the password prompt in the command window enter the matching password for the user and press enter.
+2. n SmartSDR that should get launched, setup this instance the way you want, i.e. change the STATION name etc...
+3. Now do the same with the second Shortcut, i.e. Launch, enter password, configure SmartSDR etc...
+4. The next time you launch from the Shortcuts you shouldn't be prompted for the passwords, they should just launch the application.
 
 Hope this makes sense?
 
