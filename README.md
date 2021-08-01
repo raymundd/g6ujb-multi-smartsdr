@@ -71,8 +71,6 @@ This method employs two local Windows user accounts to isolate the SSDR.settings
 Create 2 local users, make sure you do not create Microsoft accounts for these, Windows will try to encourage you to do this twice! - To do this launch the "Add, edit or remove other users" tool,
 
 > hint... enter "add" into the task-bar search.
-
-
 > Windows 10, just click "Add someone else to this PC", Windows 11, click "Family & others" and then "Add Account" in the Other users section.
 
 
